@@ -1,0 +1,30 @@
+{
+  "name": "Team-Profile-Generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "directories": {
+    "test": "test",
+    "lib": "lib"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankcinq/Team-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frankcinq/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/frankcinq/Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.5"
+  }
+}
