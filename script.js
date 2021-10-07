@@ -2,13 +2,18 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
-const prompts = require("../lib/prompts");
+const prompts = require("./src/prompts");
 // add prompt questions for user
 let questions = [];
 let team = [];
 
 // app start
-function start() {}
+function start() {
+  // inquirer.prompt(prompt.basicInfoPrompt);
+  prompts.basicInfoPrompt();
+}
+
+start();
 //MANAGER: team manager’s name, employee ID, email address, and office number
 //**Which type of employee do you wish to add */
 //Possible options - intern, engineer, or none

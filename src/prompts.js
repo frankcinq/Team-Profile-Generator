@@ -1,8 +1,9 @@
 const inquirer = require("inquirer");
 const Manager = require("../lib/Manager");
-const Employee = require("../lib/Employee");
 const Intern = require("../lib/Intern");
 const Engineer = require("../lib/Engineer");
+
+let team = [];
 
 function basicInfoPrompt() {
   inquirer
@@ -60,6 +61,7 @@ function internPrompt(info) {
     .then((answers) => {
       const intern = new Intern(info.name, info.id, info.email, answers.school);
       // this employee to an array to create our team generator (may want to make a function to do this)
+      team.push(intern);
       exit();
     });
 }
@@ -82,6 +84,7 @@ function engineerPrompt(info) {
       );
 
       // this employee to an array to create our team generator (may want to make a function to do this)
+      team.push(engineer);
       exit();
     });
 }
@@ -104,6 +107,7 @@ function managerPrompt(info) {
       );
 
       // this employee to an array to create our team generator (may want to make a function to do this)
+      team.push(manager);
       exit();
     });
 }
@@ -121,6 +125,9 @@ function exit() {
       if (answers.bool) {
         basicInfoPrompt();
       } else {
+        //this is where I generate HTML:
+        //fs.writefile(location of file, team)
+        //convert javascript to html
         return;
       }
     });
